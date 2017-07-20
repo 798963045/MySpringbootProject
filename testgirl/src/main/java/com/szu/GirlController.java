@@ -26,10 +26,7 @@ public class GirlController {
     }
 
     /**
-     * 添加一个女生
-     * @param cupSize
-     * @param age
-     * @return
+    
      */
     @PostMapping(value = "girls")
     public Girl girlAdd(@RequestParam("cupSize") String cupSize,
@@ -37,7 +34,7 @@ public class GirlController {
         Girl girl=new Girl();
         girl.setAge(age);
         girl.setCupSize(cupSize);
-
+		Girl girl2=new Girl();
         return girlRespository.save(girl);
 
     }
